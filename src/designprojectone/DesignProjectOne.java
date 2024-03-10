@@ -4,6 +4,7 @@
  */
 package designprojectone;
 import java.util.*;
+import java.util.Scanner;
 /***************************************************
 *
 *  Program: Tech Fair Cost Calculator
@@ -31,13 +32,13 @@ import java.util.*;
   
 /**************** TEST CASES ************************
 *Test      Input      Desired Ouput
-*
-*
-*
-*
-*
-*
-*
+* 1      15, 15, 15       2925
+* 2      50, 50, 50       9175
+* 3
+* 4
+* 5
+* 6
+* 7
 ***************************************************/
 public class DesignProjectOne {
 
@@ -51,6 +52,8 @@ public class DesignProjectOne {
         READ ARDUINO_STUDENTS //should be int
         READ RASPBERRY_STUDENTS //should be int
         READ VR_STUDENTS //should be int
+        
+        SUM_OF_STUDENTS = ARDUINO_STUDENTS + RASPBERRY_STUDENTS + VR_STUDENTS
         
         int ARDUINO_COST = $10
         int RASPBERRY_COST = $15
@@ -68,15 +71,58 @@ public class DesignProjectOne {
             RASPBERRY_COST = $15
         END IF
         
+        IF SUM_OF_STUDENTS > 100
+            THEN give discount of 5%
+        ELSE
+            don't give discount
         
    
    */
    
   //CONSTANTS
+final int vrCost = 20;
 
   //VARIABLES
-
+int arduinoCost = 10;
+int raspberryCost = 15;
+  
   //CODE
+  Scanner lol = new Scanner (System.in);
+  System.out.println("How many Arduino students: ");
+  int arduinoStudents = lol.nextInt();
+  System.out.println("How many raspberry Pi students: ");
+  int raspberryStudents = lol.nextInt();
+  System.out.println("How many VR Projects");
+  int vrStudents = lol.nextInt();
+  
+  if (arduinoStudents>15){
+      arduinoCost = 9;
+  }
+  else{
+      arduinoCost = 10;
+  }
+  if (raspberryStudents > 15){
+      raspberryCost = 12;
+  }
+  else{
+      raspberryCost = 15;
+  }
+  
+  int totalStudents = arduinoStudents + raspberryStudents + vrStudents;
+  int sumOfEverything = (arduinoCost*arduinoStudents + raspberryStudents*raspberryCost + vrStudents*vrCost);
+  double discount = 1;
+  
+  if (totalStudents>100){
+      discount = 0.95;
+  }
+  else{
+      discount = 1;
+
+  }
+
+  System.out.println("Total cost is $" + (double)(sumOfEverything+totalSt5udents*50*discount));
+  
+  
     }
     
 }
