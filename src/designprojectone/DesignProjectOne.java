@@ -10,7 +10,7 @@ import java.util.Scanner;
 *  Program: Tech Fair Cost Calculator
 *  Author: Alexander Dai
 *  Date: March 7, 2024
-*  Description:
+*  Description: Find the total cost for the Tech Fair thing
 ****************************************************/
 
 /**************** IPO CHART ************************
@@ -49,9 +49,9 @@ public class DesignProjectOne {
    //Write Pseudocode FIRST as comments and THEN write the code
    /* Pesudocode:
       PROGRAM TechFairCostCalculator:
-        READ ARDUINO_STUDENTS //should be int
-        READ RASPBERRY_STUDENTS //should be int
-        READ VR_STUDENTS //should be int
+        Read int ARDUINO_STUDENTS
+        Read int RASPBERRY_STUDENTS
+        Read int VR_STUDENTS
         
         SUM_OF_STUDENTS = ARDUINO_STUDENTS + RASPBERRY_STUDENTS + VR_STUDENTS
         
@@ -76,6 +76,8 @@ public class DesignProjectOne {
         ELSE
             don't give discount
         
+        Print total amount of money
+        END.
    
    */
    
