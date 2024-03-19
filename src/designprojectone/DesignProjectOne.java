@@ -33,10 +33,10 @@ import java.util.Scanner;
 /**************** TEST CASES ************************
 *Test      Input      Desired Ouput
 * 1      15, 15, 15       65, 2925
-* 2      50, 50, 50       9175
-* 3      10, 10, 10       1950
-* 4      16, 20, 10       2944
-* 5      15, 21, 10       2902
+* 2      50, 50, 50       61.16, 9175
+* 3      10, 10, 10       65, 1950
+* 4      16, 20, 10       64, 2944
+* 5      15, 21, 10       63.08, 2902
 * 6      -1, -1, -1       -195
 * 7      0, 0, 0          0
 ***************************************************/
@@ -77,6 +77,7 @@ public class DesignProjectOne {
             don't give discount
         
         Print total amount of money
+        Print cost per student
         END.
    
    */
@@ -127,6 +128,20 @@ int raspberryCost = 15;
 
   }
 
+  // if negative number is input
+  if (arduinoStudents<0){
+      System.out.println("Please enter a positive integer");
+      return;
+  }
+  if (raspberryStudents<0){
+      System.out.println("Please enter a positive integer");
+      return;
+  }
+  if (vrStudents<0){
+      System.out.println("Please enter a positive integer");
+      return;
+      
+  }
   //cost for each student
   double studentCost = Math.floor(((sumOfEverything+totalStudents*50*discount)/totalStudents)*100)/100.00;
   System.out.println("Cost for each student is $" + studentCost);
