@@ -55,9 +55,9 @@ public class DesignProjectOne {
         
         SUM_OF_STUDENTS = ARDUINO_STUDENTS + RASPBERRY_STUDENTS + VR_STUDENTS
         
-        int ARDUINO_COST = $10
-        int RASPBERRY_COST = $15
-        int VR_COST = $20
+        ARDUINO_COST = $10
+        RASPBERRY_COST = $15
+        VR_COST = $20
         
         IF ARDUINO_STUDENTS > 15
             THEN ARDUINO_COST = $9
@@ -110,8 +110,13 @@ int raspberryCost = 15;
       raspberryCost = 15;
   }
   
+  // calculate for total number of students
   int totalStudents = arduinoStudents + raspberryStudents + vrStudents;
+  
+  // getting the sum of everything
   int sumOfEverything = (arduinoCost*arduinoStudents + raspberryStudents*raspberryCost + vrStudents*vrCost);
+  
+  // discount
   double discount = 1;
   
   if (totalStudents>100){
@@ -122,7 +127,10 @@ int raspberryCost = 15;
 
   }
 
+  //print cost for each student
   System.out.println("Cost for each student is $" + (double)(sumOfEverything+totalStudents*50*discount)/totalStudents);
+  
+  //print total cost
   System.out.println("Total cost is $" + (double)(sumOfEverything+totalStudents*50*discount));
   
   
