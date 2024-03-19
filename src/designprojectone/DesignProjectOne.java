@@ -122,7 +122,7 @@ int raspberryCost = 15;
 
   }
 
-  System.out.println("Total cost is $" + (double)(sumOfEverything+totalStudents*50*discount)/totalStudents);
+  System.out.println("Cost for each student is $" + (double)(sumOfEverything+totalStudents*50*discount)/totalStudents);
   
   
     }
