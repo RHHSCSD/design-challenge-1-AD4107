@@ -32,7 +32,7 @@ import java.util.Scanner;
   
 /**************** TEST CASES ************************
 *Test      Input      Desired Ouput
-* 1      15, 15, 15       2925
+* 1      15, 15, 15       65, 2925
 * 2      50, 50, 50       9175
 * 3      10, 10, 10       1950
 * 4      16, 20, 10       2944
@@ -127,8 +127,9 @@ int raspberryCost = 15;
 
   }
 
-  //print cost for each student
-  System.out.println("Cost for each student is $" + (double)(sumOfEverything+totalStudents*50*discount)/totalStudents);
+  //cost for each student
+  double studentCost = Math.floor(((sumOfEverything+totalStudents*50*discount)/totalStudents)*100)/100.00;
+  System.out.println("Cost for each student is $" + studentCost);
   
   //print total cost
   System.out.println("Total cost is $" + (double)(sumOfEverything+totalStudents*50*discount));
