@@ -77,6 +77,7 @@ public class DesignProjectOne {
             don't give discount
         
         Print total amount of money
+        Print cost per student
         END.
    
    */
